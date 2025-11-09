@@ -1,0 +1,13 @@
+[build]
+  base = "taskflow-pro"
+  command = "yarn build"
+  publish = "dist"
+  environment = { NODE_VERSION = "18" }
+
+[context.production.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
